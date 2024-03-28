@@ -17,6 +17,6 @@ def hesh_gen(data: list):
 
 
 for data in data_base:
-    fio = data[1]
-    hesh = hesh_gen(data)
-    f.write(fio + ',' + str(hesh) + '\n')
+    data[0] =  str(hesh_gen(data))
+    f.write(','.join(data) + '\n')
+f.close()
